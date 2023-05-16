@@ -1,10 +1,14 @@
 [
     {
-        "text": "Introduction",
+        "text": "General",
         "children": [
           {
             "text": "About",
-            "link": "/introduction/about"
+            "link": "/general/about"
+          },
+          {
+            "text": "Theming / White-labeling",
+            "link": "/general/theming"
           }
         ]
     },
@@ -61,6 +65,16 @@
         {
           "text": "Field Types",
           "link": "/concepts/field-types",
+          "children": []
+        },
+        {
+          "text": "Spaces",
+          "link": "/concepts/spaces",
+          "children": []
+        },
+        {
+          "text": "CLI",
+          "link": "/concepts/cli",
           "children": []
         }
       ]

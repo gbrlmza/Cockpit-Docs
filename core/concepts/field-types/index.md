@@ -109,6 +109,11 @@ Example result:
 }
 ```
 
+** Options **
+
+- `display`: Displey preview of linked content item.
+  Example: `${data.title}`
+
 ### Date
 
 The *Date* field displays a simple date picker to choose a date from.
@@ -352,6 +357,12 @@ If the field name is named using kebab case (generally not recommended), the fol
 ${data['some-field-name']}
 ```
 
+If you want to display the value of a linked content item, you just pass the field to the dedicated `$content` helper function followed by the value path you want to get displeyed:
+
+```
+${ $content(data.post, '${data.title}') }
+```
+
 ### Text
 
 The *Text* field displays a simple text input.
@@ -378,7 +389,7 @@ Example result:
 
 ### Wysiwyg
 
-The *Wysiwyg* field displays a textarea with wysiwyg editor on it.
+The *Wysiwyg* field displays a textarea with a [TinyMCE](https://www.tiny.cloud/docs/tinymce/6/) wysiwyg editor.
 
 Use a *Wysiwyg* field whenever you want to allow HTML formatted content within your content model data.
 
@@ -387,3 +398,7 @@ Example result:
 ```json:no-line-numbers
 "wysiwyg-example": "<p>Hello <strong>World</strong>!</p>"
 ```
+
+[Initial configuration of the TinyMCE editor](https://www.tiny.cloud/docs/tinymce/6/editor-important-options/) can be modified through the `options` tab in the Field Settings.
+
+![Screenshot of field settings showing options configured for TinyMCE editor](./wysiwyg-options-config-example.png)
